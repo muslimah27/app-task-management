@@ -58,7 +58,7 @@ class LoginView extends GetView<LoginController> {
                     ),
                     child: InkWell(
                       onTap: (){
-                        Navigator.pushNamed(context, 'about');
+                        Navigator.pushNamed(context, 'home');
                       },
                       child: Ink(
                         
