@@ -22,5 +22,5 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/image/login.png
+    - assets/image/
 

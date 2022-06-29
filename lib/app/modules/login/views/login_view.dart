@@ -18,6 +18,7 @@ class LoginView extends GetView<LoginController> {
         ),
         child: Row(
           children: [
+            !context.isPhone? 
             Expanded(
                 child: Container(
                   padding: EdgeInsets.all(12),
@@ -35,7 +36,8 @@ class LoginView extends GetView<LoginController> {
                   Text("Login Untuk Akses", style: TextStyle(color: Colors.white, fontSize: 18),),
                 ],
               ),
-            )),
+            )
+            ): const SizedBox(),
             Expanded(
                 child: Container(
              decoration: BoxDecoration(
