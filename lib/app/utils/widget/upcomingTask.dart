@@ -23,7 +23,7 @@ class upcomingTask extends StatelessWidget {
               const SizedBox(height: 20),
               SingleChildScrollView(
                 child: SizedBox(
-                  height: 175,
+                  height: 150,
                   child: ListView(
                     physics: const AlwaysScrollableScrollPhysics(),
                     scrollDirection: Axis.vertical,
