@@ -3,6 +3,7 @@ import 'dart:html';
 import 'package:app_task_management/app/routes/app_pages.dart';
 import 'package:app_task_management/app/utils/style/appColors.dart';
 import 'package:app_task_management/app/utils/widget/headers.dart';
+import 'package:app_task_management/app/utils/widget/myFriends.dart';
 import 'package:app_task_management/app/utils/widget/sidebar.dart';
 import 'package:app_task_management/app/utils/widget/upcomingTask.dart';
 import 'package:flutter/material.dart';
@@ -123,10 +124,9 @@ final GlobalKey<ScaffoldState> _drawerKey = GlobalKey();
                                 SizedBox(
                                   height: 175,
                                   child: ListView(
-                                    physics:
-                                        const AlwaysScrollableScrollPhysics(),
-                                    scrollDirection: Axis.horizontal,
-                                    shrinkWrap: true,
+                                  physics: const AlwaysScrollableScrollPhysics(),
+                                  scrollDirection: Axis.horizontal,
+                                  shrinkWrap: true,
                                     children: [
                                       Container(
                                         margin: const EdgeInsets.all(10),
@@ -516,42 +516,16 @@ final GlobalKey<ScaffoldState> _drawerKey = GlobalKey();
                             ),
                           ),
                           // end of MY TASK
-                          Expanded(
+                          ! context.isPhone 
+                          ? Expanded(
                             child: Row(
-                              children: [
-                  upcomingTask(),
-                                Expanded(
-                                  child: Column(
-                                    children: [
-                                      Row(
-                                        children: const [
-                                          Text(
-                                            'My Friends',
-                                            style: TextStyle(
-                                              color: appColors.primaryText,
-                                              fontSize: 30,
-                                            ),
-                                          ),
-                                          Spacer(),
-                                          Text(
-                                            'More',
-                                            style: TextStyle(
-                                              color: appColors.primaryText,
-                                              fontSize: 30,
-                                            ),
-                                          ),
-                                          Icon(
-                                            Icons.arrow_forward,
-                                            color: appColors.primaryText,
-                                          ),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                )
+                              children: const[
+                                upcomingTask(),
+                                myFriends()
                               ],
                             ),
                           )
+                          : const upcomingTask(),
                         ],
                       ),
                     ),
@@ -565,3 +539,4 @@ final GlobalKey<ScaffoldState> _drawerKey = GlobalKey();
     );
   }
 }
+
