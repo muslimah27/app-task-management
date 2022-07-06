@@ -27,6 +27,8 @@ class AppPages {
       name: _Paths.HOME,
       page: () => HomeView(),
       binding: HomeBinding(),
+      transition: Transition.downToUp,
+      transitionDuration: Duration(seconds: 1),
     ),
     GetPage(
       name: _Paths.NAME,
@@ -45,17 +47,17 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.FRIEND,
-      page: () => const FriendView(),
+      page: () => FriendView(),
       binding: FriendBinding(),
     ),
     GetPage(
       name: _Paths.PROFILE,
-      page: () => const ProfileView(),
+      page: () => ProfileView(),
       binding: ProfileBinding(),
     ),
     GetPage(
       name: _Paths.TASK,
-      page: () => const TaskView(),
+      page: () => TaskView(),
       binding: TaskBinding(),
     ),
   ];
