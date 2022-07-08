@@ -52,9 +52,10 @@ class myFriends extends StatelessWidget {
                 child: GridView.builder(
                 shrinkWrap: true,
                 itemCount: 6,
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 3, 
-                    crossAxisSpacing: 20, mainAxisSpacing: 20),
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: context.isPhone ? 2 : 3, 
+                    crossAxisSpacing: 20, 
+                    mainAxisSpacing: 20),
                   itemBuilder: (context, index) {
                     return Column(
                       children: [
@@ -66,7 +67,7 @@ class myFriends extends StatelessWidget {
                                 Colors.amber,
                             radius: 60,
                             foregroundImage: NetworkImage(
-                                'https://th.bing.com/th/id/R.b8766cd53b5e1529712ed7e49365b7d4?rik=TsjlPG7zn3aD0w&riu=http%3a%2f%2fvignette2.wikia.nocookie.net%2fminions%2fimages%2fd%2fd5%2fKevin_Minion.jpg%2frevision%2flatest%3fcb%3d20150814124849%26path-prefix%3dde&ehk=wupXpg9U446Wa517LmNwMjETMELA31Kf3CqpfYJG1rc%3d&risl=&pid=ImgRaw&r=0'),
+                                'https://yt3.ggpht.com/a/AATXAJyUEgqkrx-_Vhz-cpHNMfONR22tfRaCScNzyg=s900-c-k-c0xffffffff-no-rj-mo'),
                           ),
                         ),
                         Text(
