@@ -121,7 +121,7 @@ final GlobalKey<ScaffoldState> _drawerKey = GlobalKey();
                                   borderRadius:BorderRadius.circular(50),
                                   child: const Image(
                                     image: NetworkImage(
-                                        'https://yt3.ggpht.com/a/AATXAJyUEgqkrx-_Vhz-cpHNMfONR22tfRaCScNzyg=s900-c-k-c0xffffffff-no-rj-mo'
+                                        'https://th.bing.com/th/id/OIP.LAsTdvNl0MnzSP3DKPvb1gHaEo?pid=ImgDet&w=683&h=427&rs=1'
                                     ),
                                   ),
                                 ),
@@ -171,3 +171,4 @@ final GlobalKey<ScaffoldState> _drawerKey = GlobalKey();
     );
   }
 }
+
